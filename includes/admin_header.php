@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(!isset($_SESSION['admin_id'])){
+    header("location:login.php");
+}
+
+
+ ?>
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -83,6 +91,10 @@
                      <li>
                         <a href="manage_category.php">
                          <i class="menu-icon fa fa-cogs"></i>Manage Category</a>
+                     </li>
+                     <li>
+                        <a href="manage_product.php">
+                         <i class="menu-icon fa fa-cogs"></i>Manage Product</a>
                      </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Components</a>
